@@ -95,6 +95,10 @@ You can install the Kubernetes integration for Windows using Helm. See an exampl
     - version: 2022
       imageTag: 2-windows-ltsc2022-alpha
       buildNumber: 10.0.20348
+  nodeSelector:
+    kubernetes.io/os: linux # Node selector for Linux
+  windowsNodeSelector:
+    kubernetes.io/os: windows # Node selector for Windows
   ```
 
 5. Install the integration with:
